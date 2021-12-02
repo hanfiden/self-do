@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  is_done: false
+  start_time: 2021-12-02 23:47:37
+  end_time: 2021-12-02 23:47:37
+  user: one
+  name: MyString
+
+two:
+  is_done: false
+  start_time: 2021-12-02 23:47:37
+  end_time: 2021-12-02 23:47:37
+  user: two
+  name: MyString
