@@ -3,7 +3,6 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  before_action :configure_permitted_parameters, if: :devise_controller?
 
   def configure_permitted_parameters
     # For additional fields in app/views/devise/registrations/new.html.erb
