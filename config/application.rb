@@ -5,6 +5,8 @@ require "rails/all"
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+config.i18n.available_locales = [:en, :de, :fr]
+config.i18n.default_locale = :en
 
 module SelfDo
   class Application < Rails::Application
