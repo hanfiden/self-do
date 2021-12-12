@@ -1,4 +1,9 @@
 <h1 class='mt-5'>Caldendar Test</h1>
 <%= month_calendar do |date| %>
-  <%= date   %>
+  <%= date %>
+  <% @meetings.each do |meeting| %>
+    <div>
+      <%= meeting.name %>
+    </div>
+  <% end %>
 <% end %>
