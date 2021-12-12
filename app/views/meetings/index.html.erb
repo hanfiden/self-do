@@ -1,5 +1,5 @@
 <h1 class='mt-5'>Caldendar Test</h1>
-<%= month_calendar do |date| %>
+<%= month_calendar td: ->(start_date, current_calendar_date) { {class: "calendar-date", data: {day: current_calendar_date}} } do |date| %>
   <%= date %>
   <% @meetings.each do |meeting| %>
     <div>
