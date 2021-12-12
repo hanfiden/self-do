@@ -1,7 +1,8 @@
 <h1 class='mt-5'>Caldendar Test</h1>
-<%= month_calendar td: ->(start_date, current_calendar_date) { {class: "calendar-date", data: {day: current_calendar_date}} } do |date| %>
+<%= month_calendar(events: @meetings) do |date, meetings| %>
   <%= date %>
-  <% @meetings.each do |meeting| %>
+
+  <% meetings.each do |meeting| %>
     <div>
       <%= meeting.name %>
     </div>
