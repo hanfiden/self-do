@@ -1,24 +1,26 @@
 .simple-calendar {
+
+  ////////////// HEADER CALENDER //////////////
   .calendar-heading{
     background-image: url("https://source.unsplash.com/random");
-    height: 200px;
-    background-position: center right;
+    background-position: center;
     background-size: cover;
-    padding: 60px 20px;
+    padding: 5em 1em;
     color: #fff;
     font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: space-between;
-    max-width: 730px;
+    align-items: center;
+    max-width: 650px;
     height: auto;
     margin: 0 auto;
     .calendar-title{
       font-family: 'Roboto', sans-serif;
-      font-size: 36px;
+      font-size: 2rem;
     }
     a {
       transition: transform 0.3s ease;
-      font-size: 36px;
+      font-size: 1.5rem;
     }
     a:first-child:hover {
       transform: translateX(-5px);
@@ -28,9 +30,21 @@
     }
   }
 
+  ////////////// TABLE //////////////
+  .present-bullet{
+    display: block;
+    font-size: 1.5rem;
+  }
 
   table {
-    max-width: 730px;
+    background-color: #fff;
+    line-height: 1.7rem;
+    padding: 20px;
+    padding-left: 15%;
+    padding-right: 15%;
+    overflow: hidden;
+    text-align: center;
+    max-width: 650px;
     height: auto;
     margin: 0 auto;
   }
@@ -44,27 +58,16 @@
   }
 
   td {
-    padding: 6px;
-    vertical-align: top;
-    width: 14%;
-
-    border: 1px solid #ddd;
-    border-top-color: rgb(221, 221, 221);
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-right-color: rgb(221, 221, 221);
-    border-right-style: solid;
-    border-right-width: 1px;
-    border-bottom-color: rgb(221, 221, 221);
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-left-color: rgb(221, 221, 221);
-    border-left-style: solid;
-    border-left-width: 1px;
+    background-color: white;
+    border:none;
+    cursor: pointer;
+    &:hover{
+      background-color: rgb(216, 216, 216);
+    }
   }
 
   .day {
-    height: 80px;
+    height: 70px;
   }
 
   .wday-0 {}
@@ -76,7 +79,10 @@
   .wday-6 {}
 
   .today {
-    background: #FFFFC0
+    background: #FFFFC0;
+    &:hover{
+      background: rgb(176, 155, 196);
+    }
   }
 
   .past {}
