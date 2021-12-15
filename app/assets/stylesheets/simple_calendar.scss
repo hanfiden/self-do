@@ -12,6 +12,7 @@
     justify-content: space-between;
     align-items: center;
     max-width: 650px;
+    min-width: 400px;
     height: auto;
     margin: 0 auto;
     .calendar-title{
@@ -39,9 +40,6 @@
   table {
     background-color: #fff;
     line-height: 1.7rem;
-    padding: 20px;
-    padding-left: 15%;
-    padding-right: 15%;
     overflow: hidden;
     text-align: center;
     max-width: 650px;
