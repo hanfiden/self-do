@@ -1,6 +1,6 @@
 <h1 class='mt-5 text-center mb-3'>Hello, <%= current_user.email %></h1>
 <%= month_calendar(events: @meetings) do |date, meetings| %>
-  <%= date.day %>
+  <span ><%= date.day %></span>
 
   <% if meetings.present?%>
     <span class="present-bullet">•</span>
