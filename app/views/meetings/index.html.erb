@@ -1,5 +1,12 @@
 <div class="main__container">
   <div class="event__container">
+    <% @meetings.each do |meeting| %>
+      <div class="event__description">
+        <%= meeting.name %>
+        <%= meeting.start_time.strftime("% %m %y") %>
+        <%= meeting.end_time %>
+      </div>
+    <% end %>
   </div>
 
   <div class="calendar__container">

@@ -12,3 +12,18 @@ a {
     color: aliceblue;
   }
 }
+
+.main__container{
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+.event__container{
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.event__description{
+
+}
