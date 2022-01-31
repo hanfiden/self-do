@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: rgb(248, 248, 248);
 }
 
 a {
@@ -21,6 +22,11 @@ a {
   padding-top: 3rem;
   display: flex;
   flex-direction: column;
+  padding-left: 2rem;
+}
+
+.event__title{
+  padding-bottom: 2rem;
 }
 
 .event-done{
