@@ -1,14 +1,12 @@
 <div class="main__container">
   <div class="event__container">
-    <h1>Events</h1>
+    <h1 class="event__title">Events</h1>
     <% @meetings.each do |meeting| %>
       <div class="event__description <%= 'event-done' if meeting.is_done == true %>">
-        <%= meeting.name %>
+        <h4><%= meeting.name.capitalize! %></h4>
         <p>
           <%= meeting.start_time.strftime('%d-%m-%Y') %>
-          <br>
-          To
-          <br>
+          /
           <%= meeting.end_time.strftime('%d-%m-%Y') %>
         </p>
       </div>
