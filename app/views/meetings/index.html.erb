@@ -8,6 +8,7 @@
           <%= meeting.start_time.strftime('%d-%m-%Y') %>
           /
           <%= meeting.end_time.strftime('%d-%m-%Y') %>
+          <%= link_to "#{ meeting.is_done ? 'Undo' : 'Mark as Done' }", toggle_enable_status_meeting_path(meeting), method: :patch, remote: :true, class: "btn btn-xs btn-success" %>
         </p>
       </div>
     <% end %>

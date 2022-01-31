@@ -1,5 +1,5 @@
 class MeetingsController < ApplicationController
-  before_action :set_meeting, only: %i[update destroy]
+  before_action :set_meeting, only: %i[update destroy toggle_enable_status]
 
   def index
     start_date = params.fetch(:start_date, Date.today).to_date
@@ -22,6 +22,11 @@ class MeetingsController < ApplicationController
 
   def destroy
     @meeting.destroy
+    redirect_to meetings_path
+  end
+
+  def toggle_enable_status
+    @meeting.toggle!(:is_done)
     redirect_to meetings_path
   end
 
