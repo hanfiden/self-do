@@ -1,10 +1,16 @@
 <div class="main__container">
   <div class="event__container">
     <h1 class="event__title">Events</h1>
+    <% if user_signed_in? %>
+      <%= link_to new_meeting_path, method: :get, class: 'mr-2' do%>
+        <h1>➕</h1>
+      <% end %>
+    <% end %>
     <% @meetings.each do |meeting| %>
       <div class="event__description <%= 'event-done' if meeting.is_done %>">
         <h4><%= meeting.name.capitalize! %></h4>
         <p>
+
           <%= meeting.start_time.strftime('%d-%m-%Y') %>
           /
           <%= meeting.end_time.strftime('%d-%m-%Y') %>
