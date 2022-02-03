@@ -1,10 +1,9 @@
 <div class="main__container">
   <div class="event__container">
     <h1 class="event__title">Events</h1>
+    <h3 class="mb-3"><%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'text-dark' %></h3>
     <% if user_signed_in? %>
-      <%= link_to new_meeting_path, method: :get, class: 'mr-2' do%>
-        <h1>➕</h1>
-      <% end %>
+      <h1><%= link_to '➕' ,new_meeting_path, method: :get%></h1>
     <% end %>
     <% @meetings.each do |meeting| %>
       <div class="event__description <%= 'event-done' if meeting.is_done %>">
