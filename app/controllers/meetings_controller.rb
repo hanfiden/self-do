@@ -1,13 +1,18 @@
 class MeetingsController < ApplicationController
-  before_action :set_meeting, only: %i[update destroy toggle_enable_status]
+  before_action :set_meeting, only: %i[edit update destroy toggle_enable_status]
 
   def index
     start_date = params.fetch(:start_date, Date.today).to_date
     @meetings = Meeting.where(start_time: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
   end
 
+  def new
+    @meeting = Meeting.new
+  end
+
   def create
     @meeting = Meeting.new(meeting_params)
+    @meeting.user = current_user
     if @meeting.save
       redirect_to meetings_path
     else
