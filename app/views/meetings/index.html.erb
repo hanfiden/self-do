@@ -7,7 +7,12 @@
     <% end %>
     <% @meetings.each do |meeting| %>
       <div class="event__description <%= 'event-done' if meeting.is_done %>">
-        <h4><%= meeting.name.capitalize! %></h4>
+        <div class="d-flex justify-content-between">
+          <h4><%= meeting.name.capitalize! %></h4>
+          <p>
+            <%= link_to '❌', meeting_path(meeting), method: :delete, data: { confirm: 'Are you sure?' } %>
+          </p>
+        </div>
         <p>
 
           <%= meeting.start_time.strftime('%d-%m-%Y') %>
